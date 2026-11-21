@@ -1,0 +1,206 @@
+/* ===== FONTS ===== ** 
+    - HEADINGS: Grenze, 100-900, Italic
+    - BODY: Faustina, 300-800, Italic
+** ================= **
+** ===== COLOR ===== **
+    - TEXT: --texas-blue
+    - PAGE BACKGROUND: gainsboro
+    - SECTION BACKGROUND: white
+    - LINK HOVER: --texas-red
+    - LINK VISITED: purple
+    - LINK ACTIVE: --texas-blue
+    - LINK DEFAULT: slateblue
+** ================= */
+@import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Grenze:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --texas-blue: #00205B;
+    --texas-red: #BF0D3E;
+    --stroke: 3px;
+}
+/* ============ */
+/* BODY STYLING */
+/* ============ */
+/* == OVERWRITE DEFAULT PADDING AND MARGIN == */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* == BODY == */
+body {
+    font: 400 20px/1.5 "Faustina", serif;
+    color: #00205B;
+    background-color: gainsboro;
+}
+main, footer {
+    background-color: white;
+}
+main {
+    padding: 20px 80px;
+}
+
+/* TEXT AND LISTS */
+p {
+    margin-bottom: 15px;
+}
+ol, ul:not(nav ul) {
+    padding-left: 40px;
+}
+/* == HEADINGS == */
+h1 {
+    font: 800 50px/1.5 "Grenze", serif;
+}
+h2 {
+    font: 700 36px/1.5 "Grenze", serif;
+}
+h3 {
+    font: 700 30px/1.5 "Grenze", serif;
+}
+h4 {
+    font: 600 24px/1.5 "Grenze", serif;
+}
+
+/* == LINKS == */
+a {
+    color: slateblue;
+}
+a:visited {
+    color: purple;
+}
+a:hover {
+    color:var(--texas-red);
+}
+a:active {
+    color: var(--texas-blue);
+}
+
+/* ============================== */
+/* HEADER, FOOTER, && NAV STYLING */
+/* ============================== */
+/* == HEADER == */
+header {
+    height: 100px;
+    padding: 0 20px;
+    background-color: var(--texas-blue);
+    color: white;
+    font: 600 28px/1.5 "Grenze", serif;
+}
+header nav {
+    height: inherit;
+}
+.header-nav {
+    /* create a flexbox and align items */
+    display: flex;
+    justify-content: start; /* horizontal alignment */
+    align-items: center; /* vertical alignment */
+    height: inherit;
+}
+header nav > ul > li:last-child {
+    /* push last nav item to the right */
+    margin-left: auto;
+}
+
+/* == NAVIGATION == */
+nav li {
+    /* remove bullet of list items */
+    list-style: none;
+}
+.header-nav > li {
+    height: inherit;
+    color: white;
+}
+.header-nav > li > a, .nav-bttn {
+    height: 100px;
+    color: white;
+    background-color: var(--texas-blue);
+    /* makes background color of a match height */
+    display: block;
+    line-height: 100px;
+    padding: 0 20px;
+}
+.header-nav > li > a:hover, .nav-bttn:hover,
+.header-nav > li > a:focus, .nav-bttn:focus {
+    background: var(--texas-red);
+}
+.header-nav >li > a:active, .nav-bttn:active{
+    background-color: purple;
+}
+
+/* == DROPDOWN MENU == */
+.dropdown-parent {
+    width: fit-content;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.nav-bttn {
+    /* clear button formatting */
+    border: none;
+    font: inherit;
+    outline: inherit;
+    width: inherit;
+    text-align: center;
+    text-decoration: underline;
+}
+#nav-dropdown {
+    display: none; /* hide dropdown by default */
+    /* position dropdown relative to button (prevents menu opening from disrupting layout) */
+    position: absolute;
+    top: 100px;
+    left: 0;
+    /* sizing && background */
+    width: inherit;
+    height: fit-content;
+    background-color: gainsboro;
+    border: 5px solid var(--texas-red);
+    border-top: none;
+    box-sizing: border-box;
+}
+#nav-dropdown li {
+    background-color: white;
+    padding: 10px 10px;
+}
+#nav-dropdown li:not(:last-child) {
+    margin-bottom: 3px; 
+}
+#nav-dropdown li a:visited,
+#nav-dropdown li a {
+    color: var(--texas-blue);
+}
+#nav-dropdown li a:hover {
+    color: var(--texas-red);
+}
+#nav-dropdown li a:active {
+    color: purple;
+}
+
+/* == FOOTER == **/
+footer {
+    /* creates line between footer and main */
+    margin-top: var(--stroke); 
+    padding: 0 20px;
+    height: 200px;
+    /* line height must match height for vertical-align: middle to work for child element */
+    line-height: 200px;
+}
+footer div {
+    display: inline-block;
+    vertical-align: middle;
+    /* set line height of text to default */
+    line-height: normal;
+}
+footer p {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+/* ===================== */
+/* GENERIC STYLE CLASSES */
+/* ===================== */
+.horizontal-line {
+    background-color: var(--texas-red);
+    width: 100%;
+    height: var(--stroke);
+    margin-bottom: 15px;
+}

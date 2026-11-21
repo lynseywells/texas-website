@@ -1,0 +1,140 @@
+/* ================= */
+/* CITY PAGE STYLING */
+/* ================= */
+/* ===== COLOR ===== **
+    - ALT BACKGROUND: --texas-blue
+    - ALT TEXT: whitesmoke
+    - ALT LINK HOVER: lightcoral
+    - ALT LINK VISITED: plum
+    - ALT LINK ACTIVE: whitesmoke
+    - ALT LINK DEFAULT: lightblue
+** ================= */
+:root {
+    --texas-blue: #00205B;
+    --texas-red: #BF0D3E;
+}
+
+/* == OVERWRITE GENERIC FORMATTING == */
+p {
+    text-align: justify;
+}
+main {
+    padding: 20px 0;
+}
+section {
+    padding: 40px 60px;
+}
+h3 {
+    margin-top: 20px;
+}
+
+/* == INVERSE COLORS == */
+#economy, #demographics {
+    background-color: var(--texas-blue);
+    color: whitesmoke;
+}
+#economy a, #demographics a {
+    color: lightblue;
+}
+#economy a:visited, #demographics a:visited {
+    color: plum;
+}
+#economy a:hover, #demographics a:hover {
+    color: lightcoral;
+}
+#economy a:active, #demographics a:active {
+    color: whitesmoke;
+}
+
+/* == CITY OVERVIEW GRID == */ 
+.overview-img {
+    width: 40%;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+    border: 2px solid var(--texas-blue);
+    margin-top: 5px;
+}
+section:first-of-type {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    column-gap: 30px;
+}
+.span-cols {
+    grid-column: 1 / 3;
+}
+aside {
+    background-color: var(--texas-red);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+aside p {
+    text-align: left;
+}
+
+/* == ECONOMY SECTION STYLING == */
+.economy-img {
+    width: 30%;
+    height: auto;
+    border: 5px solid white;
+    /* push down to align with text better when because of heading */
+    margin-top: 15px;
+    margin-right: 15px;
+    float: left;
+}
+#economy h3 {
+    clear: both;
+}
+/* == JOB FIELDS SECTION STYLING == */
+#careers, #careers p {
+    text-align: center;
+}
+
+/* == HOTSPOT SECTION STYLING == */
+#hotspots {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.hotspot-img {
+    grid-column: 1 / 2 ;
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--texas-blue);
+}
+#hotspots div:first-child {
+    grid-column: 1 / 3;
+}
+#hotspots div:last-child {
+    grid-column: 2 / 3;
+}
+#hotspots div:last-child h3:first-child {
+    margin-top: 0;
+}
+
+/* == TABLE STYLING == */
+table {
+    border-collapse: collapse;
+    border: 1px solid var(--texas-blue);
+    margin: 0 auto;
+}
+th {
+    background-color: var(--texas-red);
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: gainsboro;
+    color: black;
+}
+th, td {
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 24px;
+}
+caption {
+    font-size: 24px;
+    font-weight: 600;
+}

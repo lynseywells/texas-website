@@ -1,0 +1,78 @@
+/* ================= */
+/* HOME PAGE STYLING */
+/* ================= */
+/* ===== COLOR ===== **
+    - ALT BACKGROUND: --texas-blue
+    - ALT TEXT: whitesmoke
+    - ALT LINK HOVER: lightcoral
+    - ALT LINK VISITED: plum
+    - ALT LINK ACTIVE: whitesmoke
+    - ALT LINK DEFAULT: lightblue
+** ================= */
+:root {
+    --texas-blue: #00205B;
+    --texas-red: #BF0D3E;
+}
+
+/* == OVERWRITE GENERIC FORMATTING == */
+h1 {
+    text-align: center;
+}
+p {
+    text-align: justify;
+}
+main {
+    padding: 20px 0;
+}
+section {
+    padding: 20px 80px;
+}
+
+/* == INVERSE COLORS OF EVERY OTHER SECTION == */
+section:nth-child(even) {
+    background-color: var(--texas-blue);
+    color: whitesmoke;
+}
+section:nth-child(even) a {
+    color: lightblue;
+}
+section:nth-child(even) a:visited {
+    color: plum;
+}
+section:nth-child(even) a:hover {
+    color: lightcoral;
+}
+section:nth-child(even) a:active {
+    color: whitesmoke;
+}
+
+/* == IMAGE STYLING == */
+.longhorn-img {
+    width: 100%;
+    height: auto;
+}
+.bluebonnet-img {
+    width: 25%;
+    height: auto;
+    float: right;
+    margin-left: 15px;
+}
+.cowboy-img {
+    width: 30%;
+    height: auto;
+    /* push down to align with text better when because of heading */
+    margin-top: 15px;
+    float: left;
+    margin-right: 15px;
+}
+
+/* == PULL QUOTE == */
+.pull-quote {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: var(--texas-red);
+    color: white;
+    margin-bottom: 15px;
+}
+

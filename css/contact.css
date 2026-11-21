@@ -1,0 +1,93 @@
+/* ===== FONTS ===== ** 
+    - HEADINGS: Grenze, 100-900, Italic
+    - BODY: Faustina, 300-800, Italic
+** ================= **
+** ===== COLOR ===== **
+    - TEXT: --texas-blue
+    - PAGE BACKGROUND: gainsboro
+    - SECTION BACKGROUND: white
+    - LINK HOVER: --texas-red
+    - LINK VISITED: purple
+    - LINK ACTIVE: --texas-blue
+    - LINK DEFAULT: slateblue
+** ================= */
+@import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300..800;1,300..800&family=Grenze:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --texas-blue: #00205B;
+    --texas-red: #BF0D3E;
+}
+
+/* == FORM LAYOUT == */
+body {
+    background-color: gainsboro;
+}
+main {
+    padding: 60px 25% 60px 25%;
+}
+.container {
+    padding: 20px;
+    border: 4px solid gainsboro;
+}
+form {
+    display: grid;
+    /* fr takes into account gap, % causes content to extend beyond 
+    ** container because it does not count gap. */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+}
+.email, .textbox, button {
+    /* span entire grid */
+    grid-column: 1 / 3;
+}
+form div {
+    /* display label above input */
+    display: flex;
+    flex-direction: column;
+}
+.underline {
+    height: 5px;
+    background: gainsboro;
+    margin-bottom: 10px;
+}
+
+/* == ALIGNMENT AND SIZING == */
+h1 {
+    text-align: center;
+}
+label {
+    font: 600 28px/1.5 "Grenze", serif;
+}
+input[type="text"], input[type="email"] {
+    height: 40px;
+    padding: 0 10px 0 10px;
+}
+textarea {
+    height: 120px;
+    padding: 10px;
+}
+input, textarea {
+    font: 400 20px/1.5 "Faustina", serif;
+    color: var(--texas-blue);
+    border: 1px solid var(--texas-blue)
+}
+
+/* == BUTTON STYLING == */
+main button {
+    background-color: var(--texas-red);
+    color: white;
+    font: 600 30px/1.5 "Grenze", serif;
+    width: 50%;
+    height: 60px;
+    border: 8px solid darkred;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+main button:hover, main button:focus {
+    background-color: crimson;
+    border: 8px solid var(--texas-red);
+}
+main button:active {
+    background-color: purple;
+    border: 5px solid indigo;
+    font: 500 30px/1.5 "Grenze", serif;
+}
